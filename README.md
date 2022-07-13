@@ -1,1 +1,2 @@
 # Computer-Store
+This project is designed to offer choices to choose in order to build a computer, starting from a case, motherboard, CPU, monitor, video card, hard dirve, and memory. This class includes 10 classes without the main class. The project will include a parent Class called PCPart to be extended by those classes, Case Class, MotherBoard Class, CPU Class, Monitor Class, VideoCard Class, HardDrive Class, Memory Class, and an Inventory Class to get all the products together. 
