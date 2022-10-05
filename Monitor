@@ -1,0 +1,29 @@
+package hw05;
+
+public class Monitor extends PCPart{
+	private String screenSize;
+	private String resolution;
+	
+	public Monitor(String name, String brand, String partNumber, double price, String screenSize, String resolution)
+	{
+		super(name, brand, partNumber, price);
+		this.screenSize = screenSize;
+		this.resolution = resolution;
+	}
+	
+	public String getScreenSize()
+	{
+		return this.screenSize;
+	}
+	public String getResolution()
+	{
+		return this.resolution;
+	}
+	@Override
+	public String toString()
+	{
+		String str = "";
+		str += super.toString() + "\nPrice:\t" + super.getPrice() + "\nScreen Size:\t" + this.getScreenSize() + "\nResolution:\t" + this.getResolution();
+		return str;
+	}
+}
