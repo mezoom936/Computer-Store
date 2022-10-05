@@ -1,0 +1,30 @@
+package hw05;
+
+public class VideoCard extends PCPart{
+	private String memory;
+	private String coreClock;
+	
+	public VideoCard(String name, String brand, String partNumber, double price, String memory, String coreClock)
+	{
+		super(name, brand, partNumber, price);
+		this.memory = memory;
+		this.coreClock = coreClock;
+	}
+	// getter methods
+	public String getMemory()
+	{
+		return this.memory;
+	}
+
+	public String getCoreClock()
+	{
+		return this.coreClock;
+	}
+	@Override
+	public String toString()
+	{
+		String str = "";
+		str += super.toString() + "\nPrice:\t" + super.getPrice() + "\nMemory:\t" + this.getMemory() + "\nCore Clock:\t" + this.getCoreClock();
+		return str;
+	}
+}
