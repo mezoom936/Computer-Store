@@ -1,0 +1,30 @@
+package hw05;
+
+public class Memory extends PCPart{
+	private String formFactor;
+	private String modules;
+	
+	public Memory(String name, String brand, String partNumber, double price, String formFactor, String modules)
+	{
+		super(name, brand, partNumber, price);
+		this.formFactor = formFactor;
+		this.modules = modules;
+	}
+	
+	public String getFormFactor()
+	{
+		return this.formFactor;
+	}
+	public String getModules()
+	{
+		return this.modules;
+	}
+	@Override
+	public String toString()
+	{
+		String str = "";
+		str += super.toString() + "\nPrice:\t" + super.getPrice() + 
+				"\nForm Factor:\t" + this.getFormFactor() + "\nModules:\t" + this.getModules();
+		return str;
+	}
+}
