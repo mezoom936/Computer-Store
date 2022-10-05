@@ -1,0 +1,31 @@
+package hw05;
+
+public class MotherBoard extends PCPart{
+	private String socket;
+	private String formFactor;
+	
+	public MotherBoard(String name, String brand, String partNumber, double price, String socket, String formFactor)
+	{
+		super(name, brand, partNumber, price);
+		this.socket = socket;
+		this.formFactor = formFactor;
+	}
+	
+	// getter methods
+	public String getSocket()
+	{
+		return this.socket;
+	}
+	
+	public String getFormFactor()
+	{
+		return this.formFactor;
+	}
+	@Override
+	public String toString()
+	{
+		String str = "";
+		str += super.toString() +  "\nPrice:\t" + super.getPrice() + "\nSocket:\t" + this.getSocket() + "\nForm Factor:\t" + this.getFormFactor();
+		return str;
+	}
+}
