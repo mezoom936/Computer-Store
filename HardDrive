@@ -1,0 +1,29 @@
+package hw05;
+
+public class HardDrive extends PCPart{
+	private String type;
+	private String capacity;
+	
+	public HardDrive(String name, String brand, String partNumber, double price, String type, String capacity)
+	{
+		super(name, brand, partNumber, price);
+		this.type = type;
+		this.capacity = capacity;
+	}
+	
+	public String getType()
+	{
+		return this.type;
+	}
+	public String getCapacity()
+	{
+		return this.capacity;
+	}
+	@Override
+	public String toString()
+	{
+		String str = "";
+		str += super.toString() + "\nPrice: " + super.getPrice() + "\nType:\t" + this.getType() + "\nCapacity:\t" + this.getCapacity();
+		return str;	
+	}
+}
