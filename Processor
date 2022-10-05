@@ -1,0 +1,31 @@
+package hw05;
+
+public class Processor extends PCPart {
+	private String coreClock;
+	private int coreCount;
+	
+	public Processor(String name, String brand, String partNumber, double price, String coreClock, int coreCount)
+	{
+		super(name, brand, partNumber, price);
+		this.coreClock = coreClock;
+		this.coreCount = coreCount;
+	}
+	
+	public String getCoreClock()
+	{
+		return this.coreClock;
+	}
+	public int getCoreCount()
+	{
+		return this.coreCount;
+	}
+	@Override
+	public String toString()
+	{
+		String str = "";
+		str += super.toString() +"\nPrice:\t" + super.getPrice() + "\nCore Clock:\t" + this.getCoreClock() + 
+				"\nCore Count:\t" + this.getCoreCount();
+		return str;
+	}
+}
+
