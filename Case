@@ -1,0 +1,32 @@
+package hw05;
+
+public class Case extends PCPart{
+	private String type;
+	private String color;
+	
+	public Case(String name, String brand, String partNumber, double price, String type, String color)
+	{
+		super(name, brand, partNumber, price);
+		this.type = type;
+		this.color = color;
+	}
+	
+	// getters methods
+	public String getTyoe()
+	{
+		return this.type;
+	}
+	public String getColor()
+	{
+		return this.color;
+	}
+	@Override
+	public String toString()
+	{
+		String str = "";
+		str += super.toString() + "\nPrice:\t" + super.getPrice() + "\nType:\t" + this.getTyoe() + "\nColor:\t" + 
+		this.getColor();
+		return str;
+	}
+
+}
