@@ -1,0 +1,102 @@
+package hw05;
+
+public class PC {
+	private Case tower;
+	private MotherBoard motherBoard;
+	private Processor processor;
+	private VideoCard videocard;
+	private HardDrive hardDrive;
+	private Memory memory;
+	private Monitor monitor;
+	
+	public PC()
+	{
+		this.tower = null;
+		this.motherBoard = null;
+		this.processor = null;
+		this.videocard = null;
+		this.hardDrive = null;
+		this.memory = null;
+		this.monitor = null;
+	}
+	
+	public Case getCase()
+	{
+		return this.tower;
+	}
+	public MotherBoard getMotherBoard()
+	{
+		return this.motherBoard;
+	}
+	public Processor getProcessor()
+	{
+		return this.processor;
+	}
+	public VideoCard getVideoCard()
+	{
+		return this.videocard;
+	}
+	public HardDrive getHardDrive()
+	{
+		return this.hardDrive;
+	}
+	public Memory getMemory()
+	{
+		return this.memory;
+	}
+	public Monitor getMonitor()
+	{
+		return this.monitor;
+	}
+	// methods to add every choice to its own object
+	public void addCase(Case tower)
+	{
+		this.tower = tower;
+	}
+	public void addMotherBoard(MotherBoard motherBoard)
+	{
+		this.motherBoard = motherBoard;
+	}
+	public void addProcessor(Processor processor)
+	{
+		this.processor = processor;
+	}
+	public void addVideoCard(VideoCard videoCard)
+	{
+		this.videocard = videoCard;
+	}
+	public void addHardDrive(HardDrive hardDrive)
+	{
+		this.hardDrive = hardDrive;
+	}
+	public void addMemory(Memory memory)
+	{
+		this.memory = memory;
+	}
+	public void addMonitor(Monitor monitor)
+	{
+		this.monitor = monitor;
+	}
+	
+	public double computeTotalCost()
+	{
+		double total = 0.0;
+		total += this.tower.getPrice() +
+				this.motherBoard.getPrice() + 
+				this.processor.getPrice() +
+				this.videocard.getPrice() + 
+				this.hardDrive.getPrice() +
+				this.memory.getPrice() +
+				this.monitor.getPrice();
+		return total;
+	}
+	public String toString()
+	{
+		String str = "";
+		str += "\nTower:\t" + this.tower + "\nMother Board:\t" + this.motherBoard
+				+ "\nProcessor:\t" + this.processor + "\nVideo Card:\t" + this.videocard
+				+ "\nHard Drive:\t" + this.hardDrive + "\nMemory:\t" + this.memory
+				+ "\nMonitor:\t" + this.monitor;
+		return str;
+	}
+}
