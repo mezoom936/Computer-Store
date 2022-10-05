@@ -1,0 +1,44 @@
+package hw05;
+
+/**
+ * @author mizo2
+ *
+ */
+public class PCPart {
+	private String name;
+	private String brand;
+	private String partNumber;
+	private double price;
+	
+	public PCPart(String name, String brand, String partNumber, double price)
+	{
+		this.name  = name;
+		this.brand = brand;
+		this.partNumber = partNumber;
+		this.price = price;
+	}
+	// getters methods for the data fields
+	public String getName()
+	{
+		return this.name;
+	}
+	public String getBrand()
+	{
+		return this.brand;
+	}
+	public String getParNumber()
+	{
+		return this.partNumber;
+	}
+	public double getPrice()
+	{
+		return this.price;
+	}
+	public String toString()
+	{
+		String str = "";
+		str += "\nName:\t" + this.getName() + "\nBrand:\t" + this.getBrand();
+		str += "\nPart #:\t" + this.getParNumber();
+		return str;
+	}
+}
